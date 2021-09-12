@@ -1,0 +1,54 @@
+body{
+    background: #eee3f3;
+    font-family: sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+.main {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1100px;
+}
+
+.accordion{
+    background-color: white;
+    border-radius: 1rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    background: #1D8CF3;
+    color: #fff;
+    margin: 0;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 1rem 0 0 0;
+    box-shadow: 0 3px 5px black;
+}
+.accordion__arrow {
+    float: right;
+}
+.accordion__content {
+    background: #fefefe;
+    margin: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+.accordion__content p {
+    padding: 1rem;
+}
+
+h2 + .accordion__content {
+    max-height: 0;
+}
+.open + .accordion__content {
+    max-height: 300px;
+}
+
+.arrow-open {
+    transform: rotate(90deg);
+}
